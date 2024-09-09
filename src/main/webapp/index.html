@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Control</title>
+    <style>
+        .bulb { font-size: 50px; cursor: pointer; }
+        .on { color: yellow; }
+        .off { color: grey; }
+    </style>
+</head>
+<body>
+    <h1>Bulb Control</h1>
+    <div id="bulb" class="bulb off" onclick="toggleBulb()">💡</div>
+
+    <script>
+        function toggleBulb() {
+            var bulb = document.getElementById('bulb');
+            if (bulb.classList.contains('off')) {
+                bulb.classList.remove('off');
+                bulb.classList.add('on');
+            } else {
+                bulb.classList.remove('on');
+                bulb.classList.add('off');
+            }
+        }
+    </script>
+</body>
+</html>
